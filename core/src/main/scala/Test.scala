@@ -1,4 +1,10 @@
 @hello
 object Test extends App {
-  println(this.hello)
+  println("x - " + this.hello)
+
+}
+
+object Test2 extends App {
+  import printfMacro._
+  printf("hello %s!", "1")
 }

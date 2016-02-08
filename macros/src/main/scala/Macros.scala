@@ -1,4 +1,4 @@
-import scala.reflect.macros.Context
+import scala.reflect.macros.whitebox.Context
 import scala.language.experimental.macros
 import scala.annotation.StaticAnnotation
 
@@ -11,7 +11,7 @@ object helloMacro {
         case q"object $name extends ..$parents { ..$body }" :: Nil =>
           q"""
             object $name extends ..$parents {
-              def hello: ${typeOf[String]} = "hello"
+              def hello: ${typeOf[String]} = "hello1"
               ..$body
             }
           """
