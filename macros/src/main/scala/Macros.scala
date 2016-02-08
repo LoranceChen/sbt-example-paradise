@@ -7,6 +7,12 @@ object helloMacro {
     import c.universe._
     import Flag._
     val result = {
+      /**
+        * http://docs.scala-lang.org/overviews/quasiquotes/intro.html
+        * key words:q, tq, pq, Unquote, ..$, ...$
+        *
+        * http://docs.scala-lang.org/overviews/quasiquotes/syntax-summary.html
+        */
       annottees.map(_.tree).toList match {
         case q"object $name extends ..$parents { ..$body }" :: Nil =>
           q"""

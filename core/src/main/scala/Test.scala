@@ -5,6 +5,10 @@ object Test extends App {
 }
 
 object Test2 extends App {
-  import printfMacro._
   printf("hello %s!", "1")
 }
+//
+//@identity
+//object Test3 extends App {
+//  this.macroTransform("123", 123)
+//}
